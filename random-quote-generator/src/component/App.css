@@ -1,0 +1,17 @@
+* {
+  background-color: gray;
+  color: white;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  align-items: center;
+  height: 90vh;
+}
+
+button {
+  width: 80px;
+}
