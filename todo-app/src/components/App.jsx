@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [task, setTask] = useState('');
   const [todos, setTodos] = useState(['sachin', 'mahesh']);
+  const [task, setTask] = useState('');
 
   function createTodo() {
     setTodos((oldTodos) => {
