@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Deployed at: [Name It App](https://sparkling-blancmange-ee7147.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
