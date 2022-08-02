@@ -1,12 +1,21 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import ChallengeSection from '../ChallengeSection/ChallengeSection';
+import Footer from '../Footer/Footer';
+import Landing from '../Landing/Landing';
+import Nav from '../Nav/Nav';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <p>hello from app</p>
+      {/* Nav Section */}
+      <Nav />
+      {/* Landing Section */}
+      <Landing />
+      {/* Challenge Section */}
+      <ChallengeSection />
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }
