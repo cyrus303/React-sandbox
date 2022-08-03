@@ -3,6 +3,7 @@ import TestContainer from '../TestContainer/TestContainer';
 import './ChallengeSection.css';
 
 function ChallengeSection(props) {
+  // console.log(props);
   return (
     <div className="challenge-section-container">
       <h1 className="challenge-section-header" data-aos="fade-down">

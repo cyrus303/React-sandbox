@@ -11,15 +11,21 @@ function TestContainer(props) {
     words,
     characters,
     wpm,
+    testInfo,
   } = props.data.data;
 
-  // console.log(props.data.data);
+  const onInputChange = props.data.onInputChange;
+
+  // console.log(onInputChange);
 
   return (
     <div className="test-container">
       {timeRemaning > 0 ? (
         <div data-aos="fade-up" className="typing-challenge-container">
-          <TypingChallengeContainer data={props.data.data} />
+          <TypingChallengeContainer
+            data={props.data.data}
+            onInputChange={onInputChange}
+          />
         </div>
       ) : (
         <div className="try-again-container">

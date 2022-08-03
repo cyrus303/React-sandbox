@@ -11,9 +11,12 @@ function TypingChallengeContainer(props) {
     words,
     characters,
     wpm,
+    testInfo,
   } = props.data;
 
-  console.log(props.data);
+  const onInputChange = props.onInputChange;
+
+  // console.log(props.data);
   // console.log(words);
   return (
     <div className="typing-challenge-container">
@@ -34,7 +37,7 @@ function TypingChallengeContainer(props) {
 
       {/* the real challenge */}
       <div className="typewriter-container">
-        <TypingChallenge data={props.data} />
+        <TypingChallenge data={props.data} onInputChange={onInputChange} />
       </div>
     </div>
   );
