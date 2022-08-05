@@ -15,9 +15,9 @@ function TestContainer(props) {
   } = props.data.data;
 
   const onInputChange = props.data.onInputChange;
-
+  const startAgain = props.data.startAgain;
   // console.log(onInputChange);
-
+  // console.log(startAgain);
   return (
     <div className="test-container">
       {timeRemaning > 0 ? (
@@ -29,7 +29,12 @@ function TestContainer(props) {
         </div>
       ) : (
         <div className="try-again-container">
-          <TryAgain words={words} characters={characters} wpm={wpm} />
+          <TryAgain
+            words={words}
+            characters={characters}
+            wpm={wpm}
+            startAgain={startAgain}
+          />
         </div>
       )}
     </div>

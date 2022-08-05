@@ -2,7 +2,7 @@ import React from 'react';
 import './TryAgain.css';
 
 function TryAgain(props) {
-  const { words, characters, wpm } = props;
+  const { words, characters, wpm, startAgain } = props;
   return (
     <div className="try-again-container">
       <h1>Test Results</h1>
@@ -14,13 +14,18 @@ function TryAgain(props) {
         <p>
           <b>Words:</b> {words}
         </p>
-        <p>
+        {/* <p>
           <b>Speed:</b> {wpm} wpm
-        </p>
+        </p> */}
       </div>
 
       <div>
-        <button className="end-button start-again-btn">Retry</button>
+        <button
+          onClick={() => startAgain()}
+          className="end-button start-again-btn"
+        >
+          Retry
+        </button>
         <button
           className="end-button share-btn"
           onClick={() => {

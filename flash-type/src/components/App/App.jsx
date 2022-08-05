@@ -7,19 +7,28 @@ import './App.css';
 
 const URL = 'http://metaphorpsum.com/paragraphs/1/8';
 // const totalTime = 60;
+// const defaultState = {
+//   selectedParagraph: '',
+//   timerStarted: false,
+//   timeRemaning: 60,
+//   words: 0,
+//   characters: 0,
+//   wpm: 0,
+//   testInfo: [],
+// };
 
 function App() {
   const [state, setState] = useState({
-    selectedParagraph: 'heheheh',
+    selectedParagraph: '',
     timerStarted: false,
-    timeRemaning: 60,
+    timeRemaning: 10,
     words: 0,
     characters: 0,
     wpm: 0,
     testInfo: [],
   });
 
-  useEffect(() => {
+  function fetchNewPara() {
     fetch(URL)
       .then((response) => response.text())
       .then((data) => {
@@ -33,9 +42,18 @@ function App() {
           ...prevContent,
           testInfo,
           selectedParagraph: data,
+          timeRemaning: state.timeRemaning + 5,
         }));
       });
+  }
+
+  useEffect(() => {
+    fetchNewPara();
   }, []);
+
+  function startAgain() {
+    fetchNewPara();
+  }
 
   function handleUserInput(inputValue) {
     // console.log(inputValue);
@@ -117,21 +135,21 @@ function App() {
         // * calculating wpm
         const timeSpent = 60 - remaning;
         const speed = timeSpent > 0 ? (state.words / timeSpent) * 60 : 0;
-        console.log('inside' + remaning);
+        // console.log('inside' + remaning);
         setState((prevContent) => ({
           ...prevContent,
           timeRemaning: prevContent.timeRemaning - 1,
           wpm: speed,
         }));
-        console.log(
-          `time spent: ${timeSpent}, speed: ${speed}, timeRemaning ${remaning}`
-        );
+        // console.log(
+        //   `time spent: ${timeSpent}, speed: ${speed}, timeRemaning ${remaning}`
+        // );
       } else {
         clearInterval(timer);
       }
     }, 1000);
   }
-  console.log('outside' + state.timeRemaning);
+  // console.log('outside' + state.timeRemaning);
 
   return (
     <div className="App">
@@ -140,7 +158,11 @@ function App() {
       {/* Landing Section */}
       <Landing />
       {/* Challenge Section */}
-      <ChallengeSection data={state} onInputChange={handleUserInput} />
+      <ChallengeSection
+        data={state}
+        onInputChange={handleUserInput}
+        startAgain={startAgain}
+      />
       {/* Footer Section */}
 
       <Footer />

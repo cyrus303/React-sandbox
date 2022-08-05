@@ -32,7 +32,7 @@ function TypingChallengeContainer(props) {
         />
 
         {/* words per min */}
-        <ChallengeDetailsCard cardname="speed" cardvalue={wpm} />
+        {/* <ChallengeDetailsCard cardname="speed" cardvalue={wpm} /> */}
       </div>
 
       {/* the real challenge */}
