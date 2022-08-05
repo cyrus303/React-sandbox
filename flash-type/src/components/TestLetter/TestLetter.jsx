@@ -16,7 +16,7 @@ function TestLetter(props) {
     statusClass = 'test-letter-not-attempted';
   }
 
-  console.log(status);
+  //   console.log(status);
   return <span className={`test-letter ${statusClass}`}>{letter}</span>;
 }
 
