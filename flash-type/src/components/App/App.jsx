@@ -21,7 +21,7 @@ function App() {
   const [state, setState] = useState({
     selectedParagraph: '',
     timerStarted: false,
-    timeRemaning: 10,
+    timeRemaning: 60,
     words: 0,
     characters: 0,
     wpm: 0,
@@ -42,7 +42,7 @@ function App() {
           ...prevContent,
           testInfo,
           selectedParagraph: data,
-          timeRemaning: state.timeRemaning + 5,
+          timeRemaning: state.timeRemaning,
         }));
       });
   }
