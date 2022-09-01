@@ -12,7 +12,7 @@ export default function TransactionList() {
         {transactions.map((transaction) => (
           <li className="minus">
             {transaction.text} <span>-${transaction.amount}</span>
-            <button className="delete-btn">x</button>
+            <button className="delete-btn">xxx</button>
           </li>
         ))}
       </ul>
