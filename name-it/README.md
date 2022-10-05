@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Deployed at: [Name It App](https://sparkling-blancmange-ee7147.netlify.app/)
+Deployed at: [Name It App](https://comfy-tulumba-e81962.netlify.app/)
 
 ## Available Scripts
 
