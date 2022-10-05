@@ -1,0 +1,104 @@
+.opacity-low {
+  background-color: rgba(91, 112, 131, 0.4);
+  opacity: 1;
+}
+
+.login-container {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(91, 112, 131, 0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.sign-up-box {
+  width: 40%;
+  margin: auto;
+  height: 90%;
+  background-color: #000000;
+  color: rgb(231, 233, 234);
+  border-radius: 10px;
+
+  padding: 1.5rem;
+}
+
+.sign-in-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  color: rgb(29, 155, 240);
+  border: 1px solid rgb(83, 100, 113);
+  background-color: #000;
+}
+
+.create-account {
+  padding: 3rem 3.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.input-username,
+.input-password {
+  padding: 1rem 0.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  /* margin-bottom: 2rem; */
+  background-color: #000000;
+  color: rgb(231, 233, 234);
+  border: 1px solid rgb(83, 100, 113);
+  border-radius: 5px;
+}
+
+.sign-up-create-btn {
+  width: 100%;
+  background-color: #000000;
+  color: rgb(29, 155, 240);
+  border: 1px solid rgb(83, 100, 113);
+  margin-top: 4rem;
+}
+
+.sign-in-twitter-div {
+  width: 50%;
+  margin: auto;
+}
+
+.sign-in-google,
+.sign-in-apple {
+  width: 100%;
+  color: #202124;
+  background-color: #ffffff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.error-text {
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 400;
+  color: rgb(113, 118, 123);
+}
+
+.error-text span {
+  /* color: rgb(139, 28, 28); */
+  color: rgb(29, 155, 240);
+}
+
+.text-red {
+  color: rgb(139, 28, 28);
+}
+
+#close-signin-btn,
+#close-signup-btn {
+  cursor: pointer;
+}

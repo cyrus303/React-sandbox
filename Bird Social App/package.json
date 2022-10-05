@@ -1,0 +1,26 @@
+{
+  "name": "vite-react-starter",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host --port 1337",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^2.0.0",
+    "vite": "^3.0.0"
+  },
+  "description": "This project is about building a small but functional social media app like twitter. You should have the following features:",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC"
+}

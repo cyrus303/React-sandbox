@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  /* outline: 1px solid magenta; */
+
+}
+
+body {
+  background-color: #000000;
+}
+
+/* Container */
+
+.outer-container {
+  position: relative;
+  width: 100%;
+
+  background-color: #000000;
+}
+
+.main-container {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.top-part {
+  width: 100%;
+  height: 100vh;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-part,
+.right-part {
+  height: 100vh;
+  flex-grow: 1;
+  display: flex;
+}
+
+.left-part {
+  width: 55%;
+  background-color: lightblue;
+  background: url('https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter-logo-div {
+  width: 50%;
+  height: 50%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter-logo-svg {
+  display: block;
+  fill: #ffffff;
+}
+
+.right-part {
+  flex-direction: column;
+  width: 45%;
+  background-color: #000000;
+  color: rgb(231, 233, 234);
+  padding: 2.5rem;
+}
+
+.twitter-right-top-logo {
+  width: 8%;
+}
+
+.twitter-top-svg {
+  background-color: #000000;
+  fill: rgb(231, 233, 234);
+}
+
+.twitter-title {
+  font-size: 64px;
+  padding: 2.5rem 0;
+  font-weight: 700;
+}
+
+.sign-up-div {
+  padding: 1.5rem 0;
+}
+
+.twitter-join {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+}
+
+.btn-div div {
+  margin-bottom: 1rem;
+}
+
+.login-btn {
+  height: 40px;
+  border-radius: 20px;
+  font-weight: 400;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  cursor: pointer;
+
+}
+
+.sign-up-google,
+.sign-up-apple {
+  color: #202124;
+  background-color: #ffffff;
+}
+
+.sign-up-google,
+.sign-up-apple,
+.sign-up-phone,
+.sign-in {
+  width: 40%;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+.sign-up-phone {
+  background-color: rgb(29, 155, 240);
+  color: #fff;
+}
+
+.terms {
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 400;
+  color: rgb(113, 118, 123);
+  max-width: 40%;
+}
+
+.sign-in-div {
+  padding: 2rem 0;
+}
+
+.sign-in {
+  margin-top: 1.5rem;
+  color: rgb(29, 155, 240);
+  border: 1px solid rgb(83, 100, 113);
+  background-color: #000;
+}
+
+.color-blue {
+  color: rgb(29, 155, 240);
+  cursor: pointer;
+}
+
+.footer-part {
+  padding: 1rem;
+  background-color: #000;
+  color: rgb(113, 118, 123);
+  font-size: 13px;
+  line-height: 16px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.list-link a {
+  padding-right: 1rem;
+}
+
+.list-link a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.copyright {
+  padding-top: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .top-part {
+    flex-direction: column;
+  }
+
+  .left-part,
+  .right-part {
+    width: 100%;
+  }
+
+  .left-part {
+    order: 2;
+  }
+
+  .right-part {
+    padding: 2rem;
+  }
+
+  .login-btn {
+    width: 90%;
+  }
+
+  .twitter-right-top-logo {
+    width: 30%;
+  }
+
+  .right-part {
+    height: auto;
+  }
+}
+
+.or-divider {
+  width: 40%;
+  text-align: center;
+}
