@@ -8,8 +8,10 @@ import {
   Route,
   Navigate,
   Link,
-  outlet,
   Outlet,
+  useParams,
+  useNavigate,
+  useLocation,
 } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,12 +21,42 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/myapps" element={<Navigate replace to="/learn" />} />
       <Route path="/learn" element={<Learn />}>
-        <Route path="/learn/courses" element={<Courses />} />
-        <Route path="/learn/bundle" element={<Bundle />} />
+        <Route path="courses" element={<Courses />}>
+          <Route path=":courseid" element={<CourseParam />} />
+        </Route>
+        <Route path="bundle" element={<Bundle />} />
       </Route>
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   </BrowserRouter>
 );
+
+function CourseParam() {
+  const { courseid } = useParams();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/dashboard', { state: courseid });
+  };
+
+  return (
+    <div>
+      <h1>URL Param is: {courseid} </h1>
+      <button onClick={handleClick} className="btn btn-warning">
+        Price
+      </button>
+    </div>
+  );
+}
+
+function Dashboard() {
+  const location = useLocation();
+  return (
+    <div>
+      <h1>info that i carried here: {location.state}</h1>
+    </div>
+  );
+}
 
 function Home() {
   return (
@@ -52,10 +84,17 @@ function Learn() {
 }
 
 function Courses() {
+  const courseList = ['React', 'Angular', 'Vue', 'NodeJs', 'DinoJs'];
+  const randomCourseName =
+    courseList[Math.floor(Math.random() * courseList.length)];
   return (
     <div>
       <h1>Courses List</h1>
       <h4>Courses Card</h4>
+
+      <p>More test</p>
+      <Link to={`/learn/courses/${randomCourseName}`}>{randomCourseName}</Link>
+      <Outlet />
     </div>
   );
 }
