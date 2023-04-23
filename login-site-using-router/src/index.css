@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+.app-container {
+  /* border: 1px solid red; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar {
+  width: 500px;
+
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 5px;
+}
+
+input {
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+
+/* .btn {
+  width: 200px;
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 500;
+}
+
+.butn:hover {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: #0d6efd;
+} */
+
+.register-link {
+  color: rgb(49, 49, 49);
+  margin-top: 10px;
+
+}
+
+.login-container {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

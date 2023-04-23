@@ -24,3 +24,17 @@
 .search-input:focus {
   outline: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .search-input {
+    padding: 8px 15px;
+    font-size: 1rem;
+    width: 20rem;
+    border-width: 0;
+    background: #a592f2;
+    color: #e7e9f0;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+  }
+}
