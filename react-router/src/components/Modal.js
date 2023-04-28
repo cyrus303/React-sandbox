@@ -20,7 +20,7 @@ function Modal({ onClose, children, actionBar }) {
         onClick={handleClick}
         className="fixed inset-0 bg-gray-300 opacity-80"
       ></div>
-      <div className="fixed inset-40 p-10 bg-white h-64">
+      <div className="fixed inset-40 p-10 bg-white h-64 ">
         <div className="flex flex-col justify-between h-full">
           {children}
           <div className="flex justify-end">{actionBar}</div>

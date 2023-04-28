@@ -14,7 +14,7 @@ function ModalPage({ data }) {
 
   const actionBar = (
     <div>
-      <button onClick={handleClose} class="btn btn-secondary">
+      <button onClick={handleClose} className="btn btn-secondary">
         Close
       </button>
     </div>
@@ -24,7 +24,7 @@ function ModalPage({ data }) {
     if (data.reference) {
       return data.reference;
     } else {
-      return 'Out of Scope: N/A';
+      return 'Out of Scope - N/A';
     }
   };
 
@@ -40,7 +40,7 @@ function ModalPage({ data }) {
 
   return (
     <div>
-      <button onClick={handleClick} className="btn btn-primary">
+      <button onClick={handleClick} className="btn btn-outline-primary btn-sm ">
         View
       </button>
       {showModal && modal}

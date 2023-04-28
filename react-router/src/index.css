@@ -59,3 +59,64 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+.radio-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.application-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(206, 206, 206);
+}
+
+.application-page-container>h1 {
+  font-size: 32px;
+  margin: 10px;
+}
+
+.form-group {
+  /* border: 1px solid red; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main-container {
+  /* border: 1px solid red; */
+  min-width: 600px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name-error {
+  margin-left: -150px;
+}
+
+.eft-ref {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+input.w-24:nth-child(1),
+input.form-control:nth-child(2),
+input.form-control:nth-child(3) {
+  font-size: 13px;
+  text-align: center;
+}

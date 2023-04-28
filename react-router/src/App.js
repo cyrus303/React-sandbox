@@ -17,17 +17,34 @@ import { useState } from 'react';
 
 function App() {
   const [applicationData, setApplicationData] = useState([
-    { name: 'sachin', applicationType: 'PC', reference: 111111 },
-    { name: 'Mahesh', applicationType: 'SOS', reference: 222222 },
-    { name: 'Roopa', applicationType: 'QC', reference: 333333 },
-    { name: 'Madhu', applicationType: 'QC', reference: 444444 },
-    { name: 'Hulamani', applicationType: 'PC', reference: 555555 },
+    {
+      name: 'sachin',
+      applicationType: 'Practising Certificate',
+      reference: 111111,
+    },
+    {
+      name: 'Eoghan',
+      applicationType: 'Qualifying Certificate',
+      reference: 444444,
+    },
   ]);
 
-  const handleUpdate = (name, applicationType, eftNumber) => {
+  const handleUpdate = (name, applicationType, eftNumber, checked) => {
+    let eftValue = '';
+
+    if (checked) {
+      if (eftNumber === '') {
+        eftValue = 'N/A';
+      } else {
+        eftValue = eftNumber;
+      }
+    } else {
+      eftValue = 'Out of Scope';
+    }
+
     const updatedData = [
       ...applicationData,
-      { name, applicationType, reference: eftNumber },
+      { name, applicationType, reference: eftValue },
     ];
     setApplicationData(updatedData);
   };
