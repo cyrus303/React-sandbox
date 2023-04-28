@@ -12,6 +12,8 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import { BiX } from 'react-icons/bi';
+
 function Applications({ data }) {
   console.log('from application page');
   console.log(data);
@@ -30,20 +32,24 @@ function Applications({ data }) {
   });
 
   return (
-    <div>
-      <h3>All Applications</h3>
-      <table>
+    <div className="shadow p-3 mb-5 bg-white rounded">
+      <div className="header">
+        <h3>Active Applications</h3>
+        <Link to="/" class="closebtn">
+          <BiX />
+        </Link>
+      </div>
+      <table class="table table-hover table-bordered mt-3">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Application Type</th>
-            <th>reference</th>
-            <th>link</th>
+            <th scope="col">Name</th>
+            <th scope="col">Application Type</th>
+            <th scope="col">reference No</th>
+            <th scope="col">Recept Link</th>
           </tr>
         </thead>
         <tbody>{rendredRows}</tbody>
       </table>
-      <Link to="/">Close</Link>
     </div>
   );
 }

@@ -14,7 +14,9 @@ function ModalPage({ data }) {
 
   const actionBar = (
     <div>
-      <button onClick={handleClose}>I Accept</button>
+      <button onClick={handleClose} class="btn btn-secondary">
+        Close
+      </button>
     </div>
   );
 
@@ -29,16 +31,18 @@ function ModalPage({ data }) {
   const modal = (
     <Modal onClose={handleClose} actionBar={actionBar}>
       <div className="text">
-        <h1>EFT Receipt for {data.applicationType}</h1>
-        <div>name: {data.name}</div>
-        <div>reference No: {refernceCheck()}</div>
+        <div className="title">EFT Receipt for {data.applicationType}</div>
+        <div>Name: {data.name}</div>
+        <div>Reference No: {refernceCheck()}</div>
       </div>
     </Modal>
   );
 
   return (
     <div>
-      <button onClick={handleClick}>Pay by EFT</button>
+      <button onClick={handleClick} className="btn btn-primary">
+        View
+      </button>
       {showModal && modal}
     </div>
   );

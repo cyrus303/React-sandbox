@@ -1,9 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
   font-family: 'Roboto Mono', monospace;
+  color: rgb(27, 27, 27);
+}
+
+.logo {
+  height: 250px;
+  text-align: center;
+}
+
+.homepage-container {
+  /* border: 1px solid red; */
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homepage {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subheading {
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.closebtn {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  font-size: 32px;
 }
 
 .text {
-  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+
+.text>.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
