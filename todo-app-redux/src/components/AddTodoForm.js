@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { nanoid } from '@reduxjs/toolkit';
+
+import { changeName, addTodo } from '../store';
 
 const AddTodoForm = () => {
+  const dispatch = useDispatch();
   const todoName = useSelector((state) => {
     return state.todoName;
   });
 
   const handleChange = (event) => {
-    console.log(event.target.value);
+    dispatch(changeName(event.target.value));
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
+    if (todoName) {
+      dispatch(addTodo({ id: nanoid(), title: todoName, completed: false }));
+      dispatch(changeName(''));
+    }
   };
 
   return (

@@ -4,20 +4,24 @@ const todoListSlice = createSlice({
   name: 'todoList',
   initialState: [
     { id: 1, title: 'todo1', completed: false },
-    { id: 2, title: 'todo2', completed: false },
-    { id: 3, title: 'todo3', completed: true },
-    { id: 4, title: 'todo4', completed: false },
-    { id: 5, title: 'todo5', completed: false },
+    { id: 2, title: 'todo2', completed: true },
   ],
   reducers: {
     addTodo(state, action) {
-      //
+      state.push(action.payload);
     },
     removeTodo(state, action) {
-      //
+      const updated = state.filter((note) => {
+        return note.id !== action.payload;
+      });
+      return (state = updated);
     },
     toggleCompleted(state, action) {
-      //
+      state.map((todo) => {
+        if (todo.id === action.payload) {
+          todo.completed = !todo.completed;
+        }
+      });
     },
   },
 });

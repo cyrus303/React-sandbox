@@ -2,10 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const nameSlice = createSlice({
   name: 'todoName',
-  initialState: 'asdasd',
+  initialState: '',
   reducers: {
     changeName(state, action) {
-      //
+      return (state = action.payload);
     },
   },
 });
