@@ -9,7 +9,9 @@ function Applications({ data }) {
     const rendredRows = data.map((row) => {
       return (
         <tr key={row.name}>
-          <td>{row.name}</td>
+          <td>
+            {row.name.toLowerCase().charAt(0).toUpperCase() + row.name.slice(1)}
+          </td>
           <td>{row.applicationType}</td>
           <td>{row.reference}</td>
           <td>
